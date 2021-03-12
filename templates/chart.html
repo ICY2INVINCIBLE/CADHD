@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+    <!-- 引入 echarts.js -->
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+
+</head>
+<body style="overflow:hidden">
+<!--2021.03.03 Author:Vincy-->
+
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="width: 1200px;height:780px;"></div>
+<script type="text/javascript">
+    var data1 = {{one}}
+    var data2 = {{two}}
+    var data3 = {{three}}
+    var data4 = {{four}}
+    var data5 = {{five}}
+    var data6 = {{six}}
+    var data7 = {{seven}}
+    var data8 = {{eight}}
+    var time = {{time}}
+
+
+    var cnt = 0;
+
+    var data_one = [];
+    var data_two = [];
+    var data_three = [];
+    var data_four = [];
+    var data_five = [];
+    var data_six = [];
+    var data_seven = [];
+    var data_eight = [];
+    var date = [];
+
+
+    function addData(shift) {
+
+        date.push(time[cnt]);
+        data_one.push(data1[cnt]);
+        data_two.push(data2[cnt]);
+        data_three.push(data3[cnt]);
+        data_four.push(data4[cnt]);
+        data_five.push(data5[cnt]);
+        data_six.push(data6[cnt]);
+        data_seven.push(data7[cnt]);
+        data_eight.push(data8[cnt]);
+        cnt++;
+        if (shift) {
+            data_one.shift();
+            data_two.shift();
+            data_three.shift();
+            data_four.shift();
+            data_five.shift();
+            data_six.shift();
+            data_seven.shift();
+            data_eight.shift();
+            date.shift();
+
+        }
+
+    }
+
+    for (var i = 1; i < 200; i++) {
+        addData();
+    }
+
+
+    option = {
+        grid: [
+            {
+                height: '7%',
+                x:'15%',
+                containLabel: true
+            },
+            {
+                height: '7%',
+                top: '17%',
+                x:'15%',
+                containLabel: true
+            },
+            {
+                height: '7%',
+                top: '26%',
+                x:'15%',
+                containLabel: true
+            },
+            {
+                height: '7%',
+                top: '35%',
+                x:'15%',
+                containLabel: true
+            },
+            {
+                height: '7%',
+                top: '45%',
+                x:'15%',
+                containLabel: true
+            },
+            {
+                height: '7%',
+                top: '55%',
+                x:'15%',
+                containLabel: true
+            },
+            {
+                height: '7%',
+                top: '65%',
+                x:'15%',
+                containLabel: true
+            },
+            {
+                height: '7%',
+                top: '75%',
+                x:'15%',
+                containLabel: true
+            },
+        ],
+        legend: {
+            x:'35%',
+            data: ['T7', 'CP5', 'FC5', 'C3', 'C4', 'FC6', 'CP6', 'T8'],
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                animation: true
+            }
+        },
+        xAxis: [
+            {
+                type: 'category',
+                splitLine: {
+                    show: false
+                },
+                data: date,
+                gridIndex: 0,
+            },
+            {
+                type: 'category',
+                splitLine: {
+                    show: false
+                },
+                data: date,
+                gridIndex: 1,
+
+            },
+            {
+                type: 'category',
+                splitLine: {
+                    show: false
+                },
+                data: date,
+                gridIndex: 2,
+
+            },
+            {
+                type: 'category',
+                splitLine: {
+                    show: false
+                },
+                data: date,
+                gridIndex: 3,
+
+            },
+            {
+                type: 'category',
+                splitLine: {
+                    show: false
+                },
+                data: date,
+                gridIndex: 4,
+
+            },
+            {
+                type: 'category',
+                splitLine: {
+                    show: false
+                },
+                data: date,
+                gridIndex: 5,
+
+            },
+            {
+                type: 'category',
+                splitLine: {
+                    show: false
+                },
+                data: date,
+                gridIndex: 6,
+
+            },
+            {
+                type: 'category',
+                splitLine: {
+                    show: false
+                },
+                data: date,
+                gridIndex: 7,
+
+            },
+
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                boundaryGap: false,
+                splitLine: {
+                    show: false
+                },
+                interval: 30000,
+                gridIndex: 0,
+            },
+            {
+                type: 'value',
+                boundaryGap: false,
+                splitLine: {
+                    show: false
+                },
+                interval: 30000,
+                gridIndex: 1,
+            },
+            {
+                type: 'value',
+                boundaryGap: false,
+                splitLine: {
+                    show: false
+                },
+                interval: 30000,
+                gridIndex: 2,
+            },
+            {
+                type: 'value',
+                boundaryGap: false,
+                splitLine: {
+                    show: false
+                },
+                interval: 30000,
+                gridIndex: 3,
+            },
+            {
+                type: 'value',
+                boundaryGap: false,
+                splitLine: {
+                    show: false
+                },
+                interval: 30000,
+                gridIndex: 4,
+            },
+            {
+                type: 'value',
+                boundaryGap: false,
+                splitLine: {
+                    show: false
+                },
+                interval: 30000,
+                gridIndex: 5,
+            },
+            {
+                type: 'value',
+                boundaryGap: false,
+                splitLine: {
+                    show: false
+                },
+                interval: 30000,
+                gridIndex: 6,
+            },
+            {
+                type: 'value',
+                boundaryGap: false,
+                splitLine: {
+                    show: false
+                },
+                interval: 30000,
+                gridIndex: 7,
+            },
+
+        ],
+        series: [{
+            name: 'T7',
+            type: 'line',
+            showSymbol: false,
+            hoverAnimation: false,
+            data: data_one,
+            smooth: true,
+            animation: true,
+            animationDurationUpdate: 0,
+            animation: {
+                Duration: 500000,
+            },
+            yAxisIndex: 0,
+            xAxisIndex: 0,
+
+        },
+            {
+                name: 'CP5',
+                type: 'line',
+                showSymbol: false,
+                hoverAnimation: false,
+                data: data_two,
+                smooth: true,
+                animation: true,
+                animationDurationUpdate: 0,
+                animation: {
+                    Duration: 5000,
+                },
+                yAxisIndex: 1,
+                xAxisIndex: 1,
+            },
+            {
+                name: 'FC5',
+                type: 'line',
+                showSymbol: false,
+                hoverAnimation: false,
+                data: data_three,
+                smooth: true,
+                animation: true,
+                animationDurationUpdate: 0,
+                animation: {
+                    Duration: 5000,
+                },
+                yAxisIndex: 2,
+                xAxisIndex: 2,
+            },
+            {
+                name: 'C3',
+                type: 'line',
+                showSymbol: false,
+                hoverAnimation: false,
+                data: data_four,
+                smooth: true,
+                animation: true,
+                animationDurationUpdate: 0,
+                animation: {
+                    Duration: 5000,
+                },
+                yAxisIndex: 3,
+                xAxisIndex: 3,
+            },
+            {
+                name: 'C4',
+                type: 'line',
+                showSymbol: false,
+                hoverAnimation: false,
+                data: data_five,
+                smooth: true,
+                animation: true,
+                animationDurationUpdate: 0,
+                animation: {
+                    Duration: 5000,
+                },
+                yAxisIndex: 4,
+                xAxisIndex: 4,
+            },
+            {
+                name: 'FC6',
+                type: 'line',
+                showSymbol: false,
+                hoverAnimation: false,
+                data: data_six,
+                smooth: true,
+                animation: true,
+                animationDurationUpdate: 0,
+                animation: {
+                    Duration: 5000,
+                },
+                yAxisIndex: 5,
+                xAxisIndex: 5,
+            },
+            {
+                name: 'CP6',
+                type: 'line',
+                showSymbol: false,
+                hoverAnimation: false,
+                data: data_seven,
+                smooth: true,
+                animation: true,
+                animationDurationUpdate: 0,
+                animation: {
+                    Duration: 5000,
+                },
+                yAxisIndex: 6,
+                xAxisIndex: 6,
+            },
+            {
+                name: 'T8',
+                type: 'line',
+                showSymbol: false,
+                hoverAnimation: false,
+                data: data_eight,
+                smooth: true,
+                animation: true,
+                animationDurationUpdate: 0,
+                animation: {
+                    Duration: 5000,
+                },
+                yAxisIndex: 7,
+                xAxisIndex: 7,
+            },
+
+        ]
+    };
+
+    setInterval(function () {
+        addData(true);
+        myChart.setOption({
+            xAxis: [
+                {
+                    data: date
+                },
+                {
+                    data: date
+                },
+                {
+                    data: date
+                },
+                {
+                    data: date
+                },
+                {
+                    data: date
+                },
+                {
+                    data: date
+                },
+                {
+                    data: date
+                },
+                {
+                    data: date
+                },
+
+            ],
+            series: [{
+                data: data_one
+            },
+                {
+                    data: data_two
+                },
+                {
+                    data: data_three
+                },
+                {
+                    data: data_four
+                },
+                {
+                    data: data_five
+                },
+                {
+                    data: data_six
+                },
+                {
+                    data: data_seven
+                },
+                {
+                    data: data_eight
+                }]
+        });
+    }, 500);
+
+    var myChart = echarts.init(document.getElementById('main'));
+    myChart.setOption(option);
+</script>
+</body>

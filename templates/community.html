@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!-- Site Metas -->
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <title>KidFocus</title>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css"/>
+    <!-- progress barstle -->
+    <link rel="stylesheet" href="css/css-circular-prog-bar.css">
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,600&display=swap" rel="stylesheet">
+    <!-- font wesome stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link href="../static/css/style.css" rel="stylesheet"/>
+    <!-- responsive style -->
+    <link href="../static/css/responsive.css" rel="stylesheet"/>
+
+    <link href="../static/css/core.css" rel="stylesheet"/>
+    <link href="../static/css/home.css" rel="stylesheet"/>
+    <link href="../static/css/icon.css" rel="stylesheet"/>
+
+</head>
+
+<!--自动调用loadTheArticle()访问数据库加载文章题目-->
+<body class="sub_page" onload="loadTheArticle();">
+<div class="top_container ">
+    <!-- header section strats -->
+    <header class="header_section">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg custom_nav-container ">
+                <a class="navbar-brand" href="index">
+            <span>
+              <!--KidFocus-->
+                CADHD
+            </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                        <ul class="navbar-nav  ">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index"> 首页 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="community"> 社区 </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="question"> 注意力评估 </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#" onclick="calculation()"> 注意力监测 </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="2dgame"> 2D游戏 </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about"> 关于我们 </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact"> 联系我们 </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="register"> 登录/注册 </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+</div>
+<!-- end header section -->
+
+<!-- content YDC begin -->
+<section>
+    <div class="ydc-content-slide ydc-body">
+        <div class="ydc-flex">
+            <!-- right begin -->
+            <div class="ydc-column ydc-column-8">
+                <div class="ydc-entered-box">
+                    <div class="ydc-content-right">
+                        <div class="ydc-right-head">
+                            <div class="ydc-right-head-info">
+                                <dl>
+                                    <a href="#">
+                                        <dt>总订阅</dt>
+                                        <dd>32</dd>
+                                    </a>
+                                </dl>
+                                <dl>
+                                    <a href="#">
+                                        <dt>总阅读</dt>
+                                        <dd>417</dd>
+                                    </a>
+                                </dl>
+                                <dl>
+                                    <a href="#">
+                                        <dt>昨日阅读</dt>
+                                        <dd>48</dd>
+                                    </a>
+                                </dl>
+                                <dl>
+                                    <a href="#">
+                                        <dt>总数据指数</dt>
+                                        <dd>490</dd>
+                                    </a>
+                                </dl>
+                            </div>
+                            <button class="btn ydc-ne-carousel" onclick="javascript:window.location.href='publish';">
+                                <i class="ydc-icon-shu"></i>
+                                <span>发布</span>
+                            </button>
+                        </div>
+                        <div class="ydc-right-banner">
+                            <div class="slideshow-container">
+                                <!--<a>中图片无法显示-->
+                                <img src="../static/images/ad/ad.png" style="width:100%">
+                                <a href="https://xihazahuopu.taobao.com/" target="_blank" class="mySlides fade">
+                                    <img src="../static/images/ad/ad.png" style="width:100%">
+                                </a>
+                                <a href="https://weibo.com/525135676" target="_blank" class="mySlides fade">
+                                    <img src="../static/images/ad/ad.png" style="width:100%">
+                                </a>
+                                <a href="http://www.a-ui.cn/" target="_blank" class="mySlides fade">
+                                    <img src="../static/images/ad/ad.png" style="width:100%">
+                                </a>
+                            </div>
+                        </div>
+                        <!--gongGao begin-->
+                        <div class="ydc-loading-box">
+                            <div class="ydc-tabPanel">
+                                <div>
+                                    <ul>
+                                        <li class="hit">网站公告栏</li>
+                                        <li>
+                                            <div>
+                                                <input id="search" onkeydown="if(event.keyCode==13){searchEnter();}"
+                                                       placeholder="搜索..." class="search">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ydc-panes">
+                                    <div class="ydc-pane" style="display:block;">
+                                        <ol id="title_ol" class="ydc-pane-list">
+                                        </ol>
+                                        <div class="ydc-pagination">
+                                            <ol>
+                                                <li class="ydc-previous-item">
+                                                    <button class="ydc-previous-item-btn-medium ydc-disabled">
+                                                        <span>上一页</span>
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button class="ydc-previous-item-btn-medium cur">1</button>
+                                                </li>
+                                                <li>
+                                                    <button class="ydc-previous-item-btn-medium">2</button>
+                                                </li>
+                                                <li>
+                                                    <button class="ydc-previous-item-btn-medium">3</button>
+                                                </li>
+                                                <li class="ydc-previous-item">
+                                                    <button class="ydc-previous-item-btn-medium">
+                                                        <span>下一页</span>
+                                                    </button>
+                                                </li>
+                                                <li class="ydc-item-quick">
+                                                    第
+                                                    <div class="ydc-item-quick-kun"><input type="number"
+                                                                                           aria-invalid="false"
+                                                                                           class=""></div>
+                                                    页
+                                                    <button style="margin-left:5px;"
+                                                            class="ydc-previous-item-btn-medium">
+                                                        <span>跳转</span>
+                                                    </button>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    <div class="ydc-pane">
+                                        <ol class="ydc-pane-list">
+                                            <li>
+                                                <a id="testContent" href="https://www.toutiao.com/i6553905796478927364/"
+                                                   target="_blank">大号“思域”全新十代雅阁，革新换代后的全新十代雅阁到底如何！<i>new</i></a>
+                                                <span>2017-04-17 10:00:00</span>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.toutiao.com/i6555328767567331848/" target="_blank">在国内为什么丰田阿尔法加价那么厉害还是会有人买？</a>
+                                                <span>2017-04-17 10:00:00</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">全新紧凑级SUV 天津一汽骏派D80将8月上</a>
+                                                <span>2017-04-17 10:00:00</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">4款车型/1.5L动力 骏派CX65旅行车明日上市</a>
+                                                <span>2017-04-17 10:00:00</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">大号“思域”全新十代雅阁，革新换代后的全新十代雅阁到底如何！<i>new</i></a>
+                                                <span>2017-04-17 10:00:00</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">在国内为什么丰田阿尔法加价那么厉害还是会有人买？</a>
+                                                <span>2017-04-17 10:00:00</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">全新紧凑级SUV 天津一汽骏派D80将8月上</a>
+                                                <span>2017-04-17 10:00:00</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">4款车型/1.5L动力 骏派CX65旅行车明日上市</a>
+                                                <span>2017-04-17 10:00:00</span>
+                                            </li>
+                                        </ol>
+                                        <div class="ydc-pagination">
+                                            <ol>
+                                                <li class="ydc-previous-item">
+                                                    <button class="ydc-previous-item-btn-medium ydc-disabled">
+                                                        <span>上一页</span>
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button class="ydc-previous-item-btn-medium cur">1</button>
+                                                </li>
+                                                <li>
+                                                    <button class="ydc-previous-item-btn-medium">2</button>
+                                                </li>
+                                                <li>
+                                                    <button class="ydc-previous-item-btn-medium">3</button>
+                                                </li>
+                                                <li class="ydc-previous-item">
+                                                    <button class="ydc-previous-item-btn-medium">
+                                                        <span>下一页</span>
+                                                    </button>
+                                                </li>
+                                                <li class="ydc-item-quick">
+                                                    第
+                                                    <div class="ydc-item-quick-kun"><input type="number"
+                                                                                           aria-invalid="false"
+                                                                                           class=""></div>
+                                                    页
+                                                    <button style="margin-left:5px;"
+                                                            class="ydc-previous-item-btn-medium">
+                                                        <span>跳转</span>
+                                                    </button>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- gongGao End -->
+                    </div>
+                </div>
+            </div>
+            <!-- right end -->
+        </div>
+    </div>
+</section>
+
+
+<section class="info_section layout_padding-top">
+    <div class="info_logo-box">
+        <h2>
+            <!--KidFocus-->
+            CADHD
+        </h2>
+    </div>
+    <div class="container layout_padding2">
+        <div class="row">
+
+            <div class="col-md-3">
+                <h5>
+                    有用的连接
+                </h5>
+                <ul>
+                    <li>
+                        <a href="https://openbci.com/">
+                            OpenBCI
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.scholat.com/team/hbci">
+                            脑机接口与混合智能研究小组
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/OpenBCI">
+                            GitHub
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>
+                    联系我们
+                </h5>
+                <p>
+                    如果您也在研究OpenBCI脑机接口，或是注意力相关内容，欢迎联系我们。
+                </p>
+            </div>
+
+            <div class="col-md-3">
+                <h5>
+                    相关产品
+                </h5>
+                <ul>
+                    <li style="margin-right: 0px">
+                        <a href="2Dgame">
+                            2D游戏
+                        </a>
+                    </li>
+                    <li>
+                        <a href="3Dgame">
+                            3D游戏
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>
+                    关于我们
+                </h5>
+                <p>
+                    本团队为...............................，现研究脑机接口领域与如何提高儿童注意力
+                </p>
+            </div>
+            <!--
+            <div class="col-md-3">
+
+              <div class="subscribe_container">
+                <h5>
+                    简讯
+                </h5>
+                <div class="form_container">
+                  <form action="">
+                    <input type="email" placeholder="输入您的信息">
+                    <button type="submit">
+                      提交
+                    </button>
+                  </form>
+                </div>
+              </div>
+              -->
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <div class="social_container">
+
+            <div class="social-box">
+                <a href="">
+                    <img src="../static/images/fb.png" alt="">
+                </a>
+
+                <a href="">
+                    <img src="../static/images/twitter.png" alt="">
+                </a>
+                <a href="">
+                    <img src="../static/images/linkedin.png" alt="">
+                </a>
+                <a href="">
+                    <img src="../static/images/instagram.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer section -->
+<section class="container-fluid footer_section">
+    <p>
+        Copyright &copy; 2020 All Rights Reserved By
+        <a href="">Team K.A.T</a>
+    </p>
+</section>
+<!-- footer section -->
+
+<!--  搜索逻辑实现-->
+<script>
+    function searchEnter() {
+        // 获取搜索框的内容
+        var search = document.getElementById('search').value;
+
+        // 先获取每个标题的内容
+        var tital_ol = document.getElementById('title_ol');
+        var tital_li = tital_ol.getElementsByTagName('li');
+
+        // 搜索可能存在很多次,所以需要先恢复显示,以便正常的搜索结果
+        for (var i = 0; i < tital_li.length; i++) {
+            tital_li[i].style.display = "block";
+        }
+
+        // 对每一条tital进行遍历
+        for (var i = 0; i < tital_li.length; i++) {
+            var a_innerText = tital_li[i].getElementsByTagName('a')[0].innerText;
+            // 进行搜索内容匹配
+            var k = 0;
+            for (var j = 0; j < a_innerText.length; j++) {
+                if (search[k] == a_innerText[j]) {
+                    k++;
+                    if (k == search.length) {
+                        break;
+                    }
+                }
+            }
+            if (k != search.length) {
+                // 设置此tital为隐藏
+                tital_li[i].style.display = "none";
+            }
+        }
+    }
+
+    // 调用loadTheArticle()访问数据库加载文章题目
+    function loadTheArticle() {
+        // 创建数据库访问对象
+        var db = openDatabase("KidFocus", 1.0, "All kinds of data is stored in here!", 10 * 1024 * 1024);
+
+        // 格式:
+        //      <li>
+        //          <a href="page.html" target="_blank">XXX点讯号平台关于封禁违规账号的通知（4月13日-4月20日）</a>
+        //          <span>2017-04-17 10:00:00</span>
+        //      </li>
+
+        // 对数据库中的articles表进行数据列举
+        db.transaction(function (tx) {
+            tx.executeSql("select title,content,classify,release from article", [],
+                function (tx, rs) {
+                    let article_ol = document.getElementById("title_ol");
+                    // rs.rows[i].title           标题
+                    // rs.rows[i].release_time    发布时间
+                    for (let i = 0; i < rs.rows.length; i++) {
+                        let title = rs.rows[i].title;
+                        let time = rs.rows[i].release;
+                        // 创建元素并插入html界面当中
+                        let new_li = document.createElement("li");
+                        let new_a = document.createElement("a");
+                        let new_span = document.createElement("span");
+                        let titleText = document.createTextNode(title);
+                        let timeText = document.createTextNode(time);
+                        new_a.setAttribute("target", "_blank");
+                        new_a.setAttribute("href", "#");
+                        new_a.appendChild(titleText);
+                        new_span.appendChild(timeText);
+                        new_li.appendChild(new_a);
+                        new_li.appendChild(new_span);
+                        article_ol.appendChild(new_li);
+
+                    }
+                },
+                function (tx, error) {
+                    alert("暂时没有新的文章哦！");
+                });
+        });
+
+    }
+</script>
+<script type="text/javascript" src="../static/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../static/js/bootstrap.js"></script>
+<script type="text/javascript">
+    function calculation() {
+        window.open('calculation')
+    }
+</script>
+
+</body>
+
+</html>

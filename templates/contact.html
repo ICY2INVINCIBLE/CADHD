@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>
+    <!--KidFocus-->
+    CADHD
+  </title>
+
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
+  <!-- progress barstle -->
+  <link rel="stylesheet" href="../static/css/css-circular-prog-bar.css">
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,600&display=swap" rel="stylesheet">
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Custom styles for this template -->
+  <link href="../static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="../static/css/responsive.css" rel="stylesheet" />
+
+
+
+
+  <link rel="stylesheet" href="../static/css/css-circular-prog-bar.css">
+
+
+</head>
+
+<body class="sub_page">
+  <div class="top_container ">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index">
+            <span>
+              <!--KidFocus-->
+               CADHD
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index"> 首页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="community"> 社区 </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="question"> 注意力评估 </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" onclick="calculation()"> 注意力监测 </a>
+                </li>
+                <li class="nav-item ">
+                <a class="nav-link" href="2dgame"> 2D游戏 </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about"> 关于我们 </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact"> 联系我们 </a>
+                </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="register"> 登录/注册 </a>
+                  </li>
+              </ul>
+            </div>
+        </nav>
+      </div>
+    </header>
+
+  </div>
+  <!-- end header section -->
+
+
+
+  <!-- contact section -->
+
+  <section class="contact_section ">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="d-flex justify-content-center d-md-block">
+            <h2>
+              Contact Us
+            </h2>
+          </div>
+          <form id="myForm" target="_blank" method="post">
+                <div class="contact_form-container" id="all_text">
+                  <div>
+                    <div>
+                      <input type="text" name="name" placeholder="姓名" id="name">
+                    </div>
+                    <div>
+                      <input type="email"name="email" placeholder="邮箱" id="email">
+                    </div>
+                    <div>
+                      <input type="number" name="phone" placeholder="电话号码" id="phone">
+                    </div>
+                    <div class="mt-5">
+                      <input type="text" name="message" placeholder="建议" id="message">
+                    </div>
+                    <div class="mt-5">
+                      <button type="submit" name="submit" id="submit" onclick="sendMsg()">
+                        发送
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
+
+              </form>
+        </div>
+        <div class="col-md-6">
+          <div class="contact_img-box">
+            <img src="../static/images/students.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+
+  <section class="info_section layout_padding-top">
+        <div class="info_logo-box">
+          <h2>
+              <!--KidFocus-->
+               CADHD
+          </h2>
+        </div>
+          <div class="container layout_padding2">
+            <div class="row">
+
+              <div class="col-md-3">
+                <h5>
+                    有用的连接
+                </h5>
+                <ul>
+                  <li>
+                    <a href="https://openbci.com/">
+                        OpenBCI
+                    </a>
+                  </li>
+                  <li>
+                   <a href="http://www.scholat.com/team/hbci">
+                      脑机接口与混合智能研究小组
+                   </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/OpenBCI">
+                        GitHub
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <h5>
+                    联系我们
+                </h5>
+                <p>
+                    如果您也在研究OpenBCI脑机接口，或是注意力相关内容，欢迎联系我们。
+                </p>
+              </div>
+
+              <div class="col-md-3">
+                <h5>
+                    相关产品
+                </h5>
+               <ul>
+                  <li style="margin-right: 0px">
+                    <a href="2Dgame" >
+                        2D游戏
+                    </a>
+                  </li>
+                  <li>
+                   <a href="3Dgame">
+                      3D游戏
+                   </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <h5>
+                    关于我们
+                </h5>
+               <p>
+                  本团队为....................，现研究脑机接口领域与如何提高儿童注意力
+               </p>
+              </div>
+              <!--
+              <div class="col-md-3">
+
+                <div class="subscribe_container">
+                  <h5>
+                      简讯
+                  </h5>
+                  <div class="form_container">
+                    <form action="">
+                      <input type="email" placeholder="输入您的信息">
+                      <button type="submit">
+                        提交
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                -->
+              </div>
+            </div>
+          </div>
+          <div class="container">
+              <div class="social_container">
+
+                  <div class="social-box">
+                    <a href="">
+                      <img src="../static/images/fb.png" alt="">
+                    </a>
+
+                    <a href="">
+                      <img src="../static/images/twitter.png" alt="">
+                    </a>
+                    <a href="">
+                      <img src="../static/images/linkedin.png" alt="">
+                    </a>
+                    <a href="">
+                      <img src="../static/images/instagram.png" alt="">
+                    </a>
+                  </div>
+                </div>
+          </div>
+        </section>
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2020 All Rights Reserved By
+      <a href="">Team K.A.T</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="../static/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="../static/js/bootstrap.js"></script>
+<script type="text/javascript">
+    function  scrollWindow() {
+      window.scrollTo(800,1100)
+    }
+    $(document).on('click', '#submit', function(evt){
+    if($("#name").val()==""){
+        alert("您的姓名不能为空!");
+        evt.preventDefault();  //阻止提交表单到第三方网站去
+    }else if($("#phone").val()==""){
+        alert("您的电话号码不能为空!");
+        evt.preventDefault();  //阻止提交表单到第三方网站去
+    }else if($("#email").val()==""){
+        alert("您的邮箱不能为空!");
+        evt.preventDefault();  //阻止提交表单到第三方网站去
+    }else if($("#message").val()==""){
+        alert("您的建议不能为空!");
+        evt.preventDefault();  //阻止提交表单到第三方网站去
+    }
+});
+
+    function sendMsg (){
+
+      var name=$("#name").val();
+      var phone=$("#phone").val();
+      var email=$("#email").val();
+      var advice=$("#advice").val();
+
+      alert("发送成功");
+
+
+      if(name===''||phone===''||email===''||advice===''){
+        if(name===''){
+          alert("您的姓名不能为空!");
+        }
+        else if(phone===''){
+          alert("您的电话号码不能为空!");
+        }
+        else if(email===''){
+          alert("您的邮箱不能为空!");
+        }
+        else if(advice===''){
+          alert("您的建议不能为空!");
+        }
+      }else{
+        $.ajax({
+          type:"post",
+          dataType:"json",
+          url:"/index",
+
+          data: {
+            "name":name,
+            "phone":phone,
+            "email":email,
+            "advice":advice,
+          },
+
+          success:function(data){
+            alert(data);
+          },
+          error:function (result){
+            console.log(result);
+            alert(result);
+          }
+        })
+      }
+    }
+
+    function calculation() {
+      window.open('calculation')
+    }
+  </script>
+
+
+</body>
+
+</html>
